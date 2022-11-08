@@ -1,0 +1,87 @@
+ // Part 1A Pseudocode
+int problem1A(int n) {
+    
+    if(n == 0):
+        return 0
+    
+    if (n == 1):
+        return 1;
+    
+    
+    return problem1A(n-1)+problem1A(n-2);
+}
+
+// Part 1B 
+
+
+void problem1B_equation1() {
+    
+    float p;
+
+    cin>>p;
+    
+    float b = p - int(p);
+    while(p <= 0 or b != 0):
+    cin>>p;
+    b = p - int(p);
+
+    }
+    int nextSeriesFib = 1.618 * p;
+    cout<<"next term of the sequence of p is  : " <<nextSeriesFib;
+    
+
+
+}
+
+
+  void problem1B_equation2(int n) {
+    
+      if (n == 0):
+        cout<<"Zero number of Fibonacci  is 0 ";
+
+        
+      else if( n==1):
+        
+       cout<<"First number of Fibonacci s is 1";
+    
+      else:
+            float a1 = pow((1+sqrt(5)),n);
+
+            float a2 = pow((1-sqrt(5)),n);
+
+            float a3 = pow(2,n)*sqrt(5);
+            float Fibonacci = (a1-a2)/a3;
+            cout<<""<<n<< " term of Fibonacci is "<<Fibonacci<<endl;
+            cout<<"next term  "<<Fibonacci * (1.618);
+
+         
+
+
+
+  }
+
+
+// Part 2 
+
+
+
+int maxSubArraySum(int a[], int size)
+{
+    int max_so_far = 0, max_ending_here = 0;
+ 
+    for (int i = 0; i < size; i++) {
+        max_ending_here = max_ending_here + a[i];
+        if (max_so_far < max_ending_here):
+
+            max_so_far = max_ending_here;
+           
+        
+ 
+        if (max_ending_here < 0):
+            max_ending_here = 0;
+    }
+    return max_so_far;
+}
+
+
+
